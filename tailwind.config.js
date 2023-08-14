@@ -4,6 +4,7 @@ module.exports = {
     './pages/**/*.{html,js}',
     "./node_modules/flowbite/**/*.js"
   ],
+  darkMode: 'class',
   theme: {
     screens: {
       sm: '640px',
@@ -13,7 +14,19 @@ module.exports = {
     },
     colors: {
       bpay: {
-        violet: '#BA12E4'
+        bleuFonce: '#00024C',
+        bleuClaire2: '#1AA8E9',
+        bleuClaire: '#1730B6',
+        gris1: '#A9ACBB',
+        gris2: '#E7E7E7',
+        gris3: '#7C7C7C',
+        noir2: '#303030',
+        orange: '#F24E1E',
+        violet: '#9747FF',
+        vert: '#3DD598',
+        rouge: '#FC5A5A',
+        jaune: '#FFB119',
+        blueDark: '#162233',
       },
       gray: {
         100: '#f7fafc',
@@ -261,10 +274,10 @@ module.exports = {
       ],
       serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
       mono: ['Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
-      Poppins: ['Poppins'],
-      Montserrat: ['Montserrat'],
       Inter: ['Inter'],
-      Comfortaa: ['Comfortaa']
+      Roboto: ['Roboto'],
+      Poppins: ['Poppins'],
+      Philosopher: ['Philosopher'],
     },
     fontSize: {
       xs: '0.75rem',

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B-Pay | Historique</title>
+    <title>B-Pay | Actions-Payement</title>
 
     <!-- Inclusion du la police inter & roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -83,7 +83,7 @@
                         </a>
                     </li>
 
-                    <li class="hover:bg-bpay-bleuClaire text-white pl-6 py-2 rounded-r-lg">
+                    <li class="hover:bg-bpay-bleuClaire bg-bpay-bleuClaire text-white pl-6 py-2 rounded-r-lg">
                         <a href="../../pages/action/index.html" class="flex items-center space-x-3">
                             <svg class="w-5 h-5 fill-current" stroke-width="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" style="overflow: visible;">
                                 <path fill-rule="evenodd" d="M14 5v1H2V5h12zM2 7h12v5H2V7zm12-3H2a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1zm-3 6h2v1h-2v-1z" clip-rule="evenodd"></path>
@@ -101,7 +101,7 @@
                         </a>
                     </li>
 
-                    <li class="bg-bpay-bleuClaire text-white pl-6 py-2 rounded-r-lg">
+                    <li class="hover:bg-bpay-bleuClaire text-white pl-6 py-2 rounded-r-lg">
                         <a href="../../pages/historique/index.html" class="flex items-center space-x-3">
                             <svg class="w-5 h-5 fill-current" stroke-width="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" style="overflow: visible;">
                                 <path d="M880 184H712v-64c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H384v-64c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H144c-17.7 0-32 14.3-32 32v664c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V216c0-17.7-14.3-32-32-32zm-40 656H184V460h656v380zM184 392V256h128v48c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-48h256v48c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-48h128v136H184z"></path>
@@ -209,86 +209,153 @@
         </div>
     </div>
     <!-- Content -->
-    <div class="font-Poppins pl-[18%] md:pl-[13%] lg:pl-[22%] pr-[3%] lg:pr-[2%] py-5 ease-linear w-full content">
-        <div class="lg:space-x-3">
-             <span class="font-bold lg:text-3xl">Historique Transaction</span>
-             <span class="">1.2k dans</span>
-             <span class="text-bpay-gris1">9 mois</span>
-        </div>
-        <div class="flex flex-col lg:flex-row justify-between lg:items-center">
-            <div class="flex-1">
-                <div>
-                    <span class="font-bold">Toatl Transactions</span>
-                    <span>1,219</span>
-                </div>
-            </div>
-            <div class="flex-1 flex flex-col lg:flex-row justify-between lg:items-center my-3">
-                <div class="flex items-center space-x-3 text-bpay-gris1">
-                    <span>Trier par</span>
-                    <span>
-                        <svg fill="none" stroke-width="2" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="overflow: visible;" height="1em" width="1em">
-                            <path d="m6 9 6 6 6-6"></path>
-                        </svg>
-                    </span>
-                </div>
-                <form action="" class="">
-                    <div class="relative flex justify-between items-center px-3 rounded-full border-[1px] border-bpay-gris1">
-                        <input type="search" name="" id="" class="border-none focus:border-none focus:ring-0 outline-none text-base text-bpay-gris1" placeholder="Search for transaction">
-                        <button type="submit" class="text-bpay-gris1">
-                            <svg fill="currentColor" stroke-width="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="overflow: visible;" height="1.5em" width="1.5em">
-                                <path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path>
-                            </svg>
-                        </button>
+    <div class="font-Philosopher pl-[18%] md:pl-[13%] lg:pl-[22%] pr-[3%] lg:pr-[2%] ease-linear w-full content">
+        <h2 class="my-4 font-bold  lg:text-xl flex space-x-2">
+            <span><a href="../../pages/action/index.html"> Achat d'action</a> |</span>
+            <span class="text-bpay-bleuClaire">Payement</span>
+        </h2>
+        <div class="bg-gray-50 p-1 lg:p-5 rounded-default text-bpay-gris1">
+            <div class="w-full">
+               <div class="mx-auto w-full flex justify-center items-center mb-4 border-b border-gray-200">
+                   <ul class="grid grid-cols-3 gap-4 -mb-px text-sm font-medium text-center" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+                       <li class="bg-white p-2 rounded-md" role="presentation">
+                           <button class="inline-block border-transparent rounded-lg" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">
+                            <div class="flex flex-col space-y-1">
+                                <span>
+                                    <svg class="w-8 h-8 fill-current" stroke-width="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" style="overflow: visible;">
+                                        <path d="M512 80c8.8 0 16 7.2 16 16v32H48V96c0-8.8 7.2-16 16-16h448zm16 144v192c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V224h480zM64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm56 304c-13.3 0-24 10.7-24 24s10.7 24 24 24h48c13.3 0 24-10.7 24-24s-10.7-24-24-24h-48zm128 0c-13.3 0-24 10.7-24 24s10.7 24 24 24h112c13.3 0 24-10.7 24-24s-10.7-24-24-24H248z"></path>
+                                    </svg>
+                                </span>
+                                <span class="lg:text-lg">Bank Card</span>
+                            </div>
+                           </button>
+                       </li>
+                       <li class="bg-white p-2 rounded-md" role="presentation">
+                           <button class="inline-block border-transparent rounded-lg" id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">
+                            <div class="flex flex-col space-y-1">
+                                <span>
+                                    <svg class="w-8 h-8 fill-current" stroke-width="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" style="overflow: visible;">
+                                        <path d="M512 80c8.8 0 16 7.2 16 16v32H48V96c0-8.8 7.2-16 16-16h448zm16 144v192c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V224h480zM64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm56 304c-13.3 0-24 10.7-24 24s10.7 24 24 24h48c13.3 0 24-10.7 24-24s-10.7-24-24-24h-48zm128 0c-13.3 0-24 10.7-24 24s10.7 24 24 24h112c13.3 0 24-10.7 24-24s-10.7-24-24-24H248z"></path>
+                                    </svg>
+                                </span>
+                                <span class="lg:text-lg">Mtn monney</span>
+                            </div>
+                           </button>
+                       </li>
+                       <li class="bg-white p-2 rounded-md" role="presentation">
+                           <button class="inline-block  border-transparent rounded-lg" id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab" aria-controls="contacts" aria-selected="false">
+                            <div class="flex flex-col space-y-1">
+                                <span>
+                                    <svg class="w-8 h-8 fill-current" stroke-width="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" style="overflow: visible;">
+                                        <path d="M512 80c8.8 0 16 7.2 16 16v32H48V96c0-8.8 7.2-16 16-16h448zm16 144v192c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V224h480zM64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm56 304c-13.3 0-24 10.7-24 24s10.7 24 24 24h48c13.3 0 24-10.7 24-24s-10.7-24-24-24h-48zm128 0c-13.3 0-24 10.7-24 24s10.7 24 24 24h112c13.3 0 24-10.7 24-24s-10.7-24-24-24H248z"></path>
+                                    </svg>
+                                </span>
+                                <span class="lg:text-lg">Moov monney</span>
+                            </div>
+                           </button>
+                       </li>
+                   </ul>
+               </div>
+               <div id="myTabContent">
+                   <div class="hidden p-4" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                    <form action="" class="w-full lg:w-2/3 mx-auto space-y-6 text-base">
+                        <div class="flex flex-col space-y-1">
+                            <label for="cardnum">Card Number/Numero de carte</label>
+                            <input type="text" name="" id="cardnum" placeholder="1235 1425 5698 4589" class="rounded-md px-3 py-2 border-bpay-gris1">
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-3 gap-y-4">
+                            <div class="flex flex-col space-y-1">
+                                <label for="expiration">Expiry/Expiration</label>
+                                <input type="date" name="" id="expiration" placeholder="JJ-MM-AAAA" class="rounded-md px-3 py-2 border-bpay-gris1">
+                            </div>
+                            <div class="flex flex-col space-y-1">
+                                <label for="ccv">CCV</label>
+                                <input type="text" name="" id="ccv" placeholder="CCV" class="rounded-md px-3 py-2 border-bpay-gris1">
+                            </div>
+                            <div class="flex flex-col space-y-1">
+                                <label for="pays">Country/Pays</label>
+                                <select name="" id="pays" class="rounded-md px-3 py-2 border-bpay-gris1">
+                                    <option value="">Calavi</option>
+                                </select>
+                            </div>
+                            <div class="flex flex-col space-y-1">
+                                <label for="bp">Boite Postale</label>
+                                <input type="text" name="" id="bp" placeholder="90245" class="rounded-md px-3 py-2 border-bpay-gris1">
+                            </div>
+                        </div>
+                         <div class="flex text-base items-center space-x-2">
+                             <input type="checkbox" name="" id=""> 
+                             <span class="font-normal"> J'accepte toutes les </span>
+                             <span class="text-bpay-bleuClaire"><a href="">termes</a></span>
+                             <span>et</span>
+                             <span class="text-bpay-bleuClaire"><a href="">Politique de confidentialité</a></span>
+                         </div>
+                        <div class="flex flex-col md:flex-row gap-10 justify-between items-center">
+                            <div class="w-full">
+                                <button type="submit" class="px-6 py-2 border-2 border-bpay-bleuClaire bg-bpay-bleuClaire rounded-default text-white hover:bg-bpay-bleuClaire font-medium w-full hover:text-white">
+                                    Finaliser votre achat d'action
+                                </button>
+                            </div>
+                        </div>
+                    </form>
                     </div>
-                </form>
+                    <div class="hidden p-4" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                        <form action="" class="w-full lg:w-2/3 mx-auto space-y-4 text-base">
+                            <div class="flex flex-col space-y-1">
+                                <label for="cardnum">Mtn Number/Numero Mtn</label>
+                                <input type="text" name="" id="cardnum" placeholder="+229 58457854" class="rounded-md px-3 py-2 border-bpay-gris1">
+                            </div>
+                            <div class="flex flex-col space-y-1">
+                                <label for="cardnum">Confirm Number/Confirmer Numero</label>
+                                <input type="text" name="" id="cardnum" placeholder="+229 58457854" class="rounded-md px-3 py-2 border-bpay-gris1">
+                            </div>
+                            <div class="flex flex-col space-y-1">
+                                <label for="cardnum">Montant</label>
+                                <input type="text" name="" id="cardnum" placeholder="545752" class="rounded-md px-3 py-2 border-bpay-gris1">
+                            </div>
+                            <div class="flex flex-col md:flex-row gap-10 justify-between items-center">
+                                <div class="w-full">
+                                    <button type="submit" class="px-6 py-2 border-2 border-bpay-bleuClaire bg-bpay-bleuClaire rounded-default text-white hover:bg-bpay-bleuClaire font-medium w-full hover:text-white">
+                                        Finaliser votre achat d'action
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="hidden p-4" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
+                        <form action="" class="w-full lg:w-2/3 mx-auto space-y-4 text-base">
+                            <div class="flex flex-col space-y-1">
+                                <label for="cardnum">Moov Number/Numero Moov</label>
+                                <input type="text" name="" id="cardnum" placeholder="+229 58457854" class="rounded-md px-3 py-2 border-bpay-gris1">
+                            </div>
+                            <div class="flex flex-col space-y-1">
+                                <label for="cardnum">Confirm Number/Confirmer Numero</label>
+                                <input type="text" name="" id="cardnum" placeholder="+229 58457854" class="rounded-md px-3 py-2 border-bpay-gris1">
+                            </div>
+                            <div class="flex flex-col space-y-1">
+                                <label for="cardnum">Montant</label>
+                                <input type="text" name="" id="cardnum" placeholder="545752" class="rounded-md px-3 py-2 border-bpay-gris1">
+                            </div>
+                            <div class="flex flex-col md:flex-row gap-10 justify-between items-center">
+                                <div class="w-full">
+                                    <button type="submit" class="px-6 py-2 border-2 border-bpay-bleuClaire bg-bpay-bleuClaire rounded-default text-white hover:bg-bpay-bleuClaire font-medium w-full hover:text-white">
+                                        Finaliser votre achat d'action
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- <div class="flex flex-col md:flex-row gap-10 justify-between items-center w-2/3 mx-auto px-3 my-2">
+                        <div class="w-full">
+                            <button type="submit" class="px-6 py-2 border-2 border-bpay-bleuClaire bg-bpay-bleuClaire rounded-default text-white hover:bg-bpay-bleuClaire font-medium w-full hover:text-white">
+                                Finaliser votre achat d'action
+                            </button>
+                        </div>
+                    </div> -->
+               </div>
+
             </div>
         </div>
-        <table class="w-full">
-            <th class="flex justify-between items-center w-full  !text-bpay-gris1 text-center ">
-                <tr class="w-full text-bpay-gris1 uppercase font-bold text-sm text-center border-b-[1px] border-bpay-gris1">
-                    <td class="w-2/12 text-start pb-4">ID Trensaction</td>
-                    <td class="w-1/12 pb-4">Valeur de part</td>
-                    <td class="w-1/12 pb-4">Nombre de parts</td>
-                    <td class="w-1/12 pb-4">Type</td>
-                    <td class="w-2/12 pb-4">Monttant <span class="text-[8px]">(fca)</span></td>
-                    <td class="w-1/12 pb-4">Statut</td>
-                    <td class="w-1/12 pb-4">Taxe</td>
-                    <td class="w-2/12 pb-4">Date</td>
-                </tr>
-            </th>
-            <tbody class="text-center">
-                <tr class="text-sm font-medium border-b-[1px] border-bpay-gris1">
-                    <td class="text-start py-4">0025478</td>
-                    <td class="py-4">120</td>
-                    <td class="py-4">450</td>
-                    <td class="py-4">Investit</td>
-                    <td class="py-4">50 000</td>
-                    <td class="py-4">Terminé</td>
-                    <td class="py-4">0</td>
-                    <td class="py-4">15-04-23 12:45:12</td>
-                </tr>
-                <tr class="text-sm font-medium border-b-[1px] border-bpay-gris1">
-                    <td class="text-start py-4">0025478</td>
-                    <td class="py-4">120</td>
-                    <td class="py-4">450</td>
-                    <td class="py-4">Investit</td>
-                    <td class="py-4">50 000</td>
-                    <td class="py-4">Terminé</td>
-                    <td class="py-4">0</td>
-                    <td class="py-4">15-04-23 12:45:12</td>
-                </tr>
-                <tr class="text-sm font-medium border-b-[1px] border-bpay-gris1">
-                    <td class="text-start py-4">0025478</td>
-                    <td class="py-4">120</td>
-                    <td class="py-4">450</td>
-                    <td class="py-4">Investit</td>
-                    <td class="py-4">50 000</td>
-                    <td class="py-4">Terminé</td>
-                    <td class="py-4">0</td>
-                    <td class="py-4">15-04-23 12:45:12</td>
-                </tr>
-            </tbody>
-        </table>
     </div>
     <!-- Initialisation de AOS js-->
     <script>
