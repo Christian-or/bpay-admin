@@ -28,8 +28,14 @@ module.exports = {
         orange: '#F24E1E',
         violet: '#9747FF',
         vert: '#3DD598',
+        vert2: '#10FFE8',
+        vert3: '#A690DA',
         rouge: '#FC5A5A',
+        chocolat: '#909283',
         jaune: '#FFB119',
+        info: '#FA9595',
+        valide: '#811A64',
+
         blueDark: '#162233',
       },
       gray: {

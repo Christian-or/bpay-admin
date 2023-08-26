@@ -44,10 +44,11 @@
 </head>
 
 <body class="w-full">
+
     <!-- Sidebar -->
-    <nav id="" class="sidebar w-[70%] md:w-[35%] lg:w-[20%] h-screen bg-bpay-bleuFonce z-50 dark:bg-bpay-blueDark fixed left-0 top-0 text-white !overflow-x-hidden overflow-y-auto">
+    <nav id="" class="sidebar w-[70%] md:w-[35%] lg:w-[20%] h-screen bg-bpay-bleuFonce z-40 dark:bg-bpay-blueDark fixed left-0 top-0 text-white !overflow-x-hidden overflow-y-auto">
         <div>
-            <div class="flex justify-between items-center p-4">
+            <div class="flex justify-between items-center p-4 h-[73px]">
                 <div class="flex items-center space-x-2">
                     <img src="../../assets/images/img-logo.png" alt="Logo" class="h-[40px] txt">
                     <h4 class="text-xl font-Philosopher font-bold txt">Invest in B-PAY</h4>
@@ -61,11 +62,11 @@
                     </svg>
                 </div>
             </div>
-            <hr class="">
+            <div class="h-[0.05em] w-full bg-bpay-grisBg"></div>
             <div id="survol" class="py-4  font-Inter space-y-5">
                 <ul id="ctnLien" class="flex flex-col space-y-2 pr-10 overflow-hidden">
 
-                    <li class="hover:bg-bpay-bleuClaire text-white pl-6 py-2 rounded-r-lg">
+                    <li class="hover:bg-bpay-bleuClaire  text-white pl-6 py-2 rounded-r-lg">
                         <a href="../../pages/dashbord/index.html" class="flex items-center space-x-3 link">
                             <svg class="w-5 h-5 fill-current" stroke-width="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" style="overflow: visible;">
                                 <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"></path>
@@ -74,7 +75,7 @@
                         </a>
                     </li>
 
-                    <li class="hover:bg-bpay-bleuClaire text-white pl-6 py-2 rounded-r-lg">
+                    <li class="hover:bg-bpay-bleuClaire  text-white pl-6 py-2 rounded-r-lg">
                         <a href="../../pages/graphique/index.html" class="flex items-center space-x-3">
                             <svg class="w-5 h-5 fill-current" stroke-width="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" style="overflow: visible;">
                                 <path d="M864 518H506V160c0-4.4-3.6-8-8-8h-26a398.46 398.46 0 0 0-282.8 117.1 398.19 398.19 0 0 0-85.7 127.1A397.61 397.61 0 0 0 72 552a398.46 398.46 0 0 0 117.1 282.8c36.7 36.7 79.5 65.6 127.1 85.7A397.61 397.61 0 0 0 472 952a398.46 398.46 0 0 0 282.8-117.1c36.7-36.7 65.6-79.5 85.7-127.1A397.61 397.61 0 0 0 872 552v-26c0-4.4-3.6-8-8-8zM705.7 787.8A331.59 331.59 0 0 1 470.4 884c-88.1-.4-170.9-34.9-233.2-97.2C174.5 724.1 140 640.7 140 552c0-88.7 34.5-172.1 97.2-234.8 54.6-54.6 124.9-87.9 200.8-95.5V586h364.3c-7.7 76.3-41.3 147-96.6 201.8zM952 462.4l-2.6-28.2c-8.5-92.1-49.4-179-115.2-244.6A399.4 399.4 0 0 0 589 74.6L560.7 72c-4.7-.4-8.7 3.2-8.7 7.9V464c0 4.4 3.6 8 8 8l384-1c4.7 0 8.4-4 8-8.6zm-332.2-58.2V147.6a332.24 332.24 0 0 1 166.4 89.8c45.7 45.6 77 103.6 90 166.1l-256.4.7z"></path>
@@ -101,7 +102,7 @@
                         </a>
                     </li>
 
-                    <li class="bg-bpay-bleuClaire text-white pl-6 py-2 rounded-r-lg">
+                    <li class="hover:bg-bpay-bleuClaire text-white pl-6 py-2 rounded-r-lg">
                         <a href="../../pages/historique/index.html" class="flex items-center space-x-3">
                             <svg class="w-5 h-5 fill-current" stroke-width="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" style="overflow: visible;">
                                 <path d="M880 184H712v-64c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H384v-64c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H144c-17.7 0-32 14.3-32 32v664c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V216c0-17.7-14.3-32-32-32zm-40 656H184V460h656v380zM184 392V256h128v48c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-48h256v48c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-48h128v136H184z"></path>
@@ -110,7 +111,7 @@
                         </a>
                     </li>
 
-                    <li class="hover:bg-bpay-bleuClaire text-white pl-6 py-2 rounded-r-lg">
+                    <li class="hover:bg-bpay-bleuClaire bg-bpay-bleuClaire text-white pl-6 py-2 rounded-r-lg">
                         <a href="../../pages/message/index.html" class="flex items-center space-x-3">
                             <div class="relative">
                                 <svg class="w-5 h-5 fill-current" stroke-width="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="overflow: visible;">
@@ -162,7 +163,7 @@
                     </div>
                 </div>
             </div>
-            <hr class="">
+            <div class="h-[0.05em] w-full bg-bpay-grisBg"></div>
             <div class="flex justify-between items-center text-sm py-4 px-4 font-Inter">
                 <span class="font-bold text-sm txt">Dark Mode</span>
                 <button id="theme-toggle" type="button" class="text-white dark:text-white border-[1px]  focus:outline-none rounded-lg text-sm p-2.5">
@@ -176,40 +177,145 @@
             </div>
         </div>
     </nav>
+
     <!-- top-page -->
-    <div class="z-10">
-        <div class="font-Inter text-bpay-gris1 py-3 shadow-xs">
+    <div class="!z-40">
+        <div class="font-Inter text-bpay-gris1 py-[17px] bg-white shadow-xs">
             <div class="pl-[18%] md:pl-[13%] lg:pl-[22%] pr-[3%] lg:pr-[2%] transition-all duration-1000 ease-linear w-full font-Roboto content">
-                <div class="flex justify-end  items-center space-x-6 py-[4px]">
-                    <form action="" class="hidden md:block">
-                        <div class="relative w-[400px] lg:w-[500px] flex justify-between items-center px-3 rounded-lg border-[1px] border-bpay-gris1">
-                            <input type="search" name="" id="" class="border-none focus:border-none focus:ring-0 outline-none">
-                            <button type="submit" class="text-bpay-gris1">
-                                <svg fill="currentColor" stroke-width="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="overflow: visible;" height="1.5em" width="1.5em">
-                                    <path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path>
-                                </svg>
-                            </button>
+                <div class="flex justify-between items-center">
+                    <div class="font-bold text-base  text-bpay-gris4 hidden md:block">
+                        <div class="flex flex-col">
+                            <!-- <span class="font-bold font-Poppins"></span> -->
                         </div>
-                    </form>
-                    <div class="text-bpay-gris1 relative">
-                        <svg fill="currentColor" stroke-width="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="overflow: visible;" height="1.8em" width="1.8em">
-                            <path fill="currentColor" d="M20 17h2v2H2v-2h2v-7a8 8 0 1 1 16 0v7Zm-2 0v-7a6 6 0 0 0-12 0v7h12Zm-9 4h6v2H9v-2Z"></path>
-                        </svg>
-                        <span class="w-4 h-4 bg-bpay-violet rounded-full text-white text-[10px] font-bold absolute top-0 right-0 flex flex-col justify-center items-center">12</span>
                     </div>
-                    <div class="flex items-center space-x-2">
-                        <img src="../../assets/images/img-profile.jpg" alt="" class="w-8 h-8 rounded-full ring-2 ring-bpay-gris1">
-                        <span class="text-base font-medium">Mark Mufotino</span>
-                        <svg fill="currentColor" stroke-width="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="overflow: visible;" height="0.8em" width="0.8em">
-                            <path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"></path>
-                        </svg>
+                    <div class="flex justify-end  items-center space-x-5 ">
+                        <!-- Modal toggle -->
+                        <div class="hidden">
+                            <a href="" class="bg-bpay-bleuClaire text-white text-xs font-bold px-4 py-2 rounded-full flex items-center space-x-2">
+                                <span>+</span>
+                                <span class="hidden md:block">Plus d'action</span>
+                            </a>
+                        </div>
+                        <button data-modal-target="defaultModal" data-modal-toggle="defaultModal" class="block" type="button">
+                            <!-- <svg fill="currentColor" stroke-width="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="overflow: visible;" height="2em" width="2em">
+                                <path d="M10.25 2a8.25 8.25 0 0 1 6.34 13.53l5.69 5.69a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-5.69-5.69A8.25 8.25 0 1 1 10.25 2ZM3.5 10.25a6.75 6.75 0 1 0 13.5 0 6.75 6.75 0 0 0-13.5 0Z"></path>
+                            </svg> -->
+                            <svg fill="currentColor" stroke-width="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height="1.9em" width="1.9em" style="overflow: visible;">
+                                <path d="M221.09 64a157.09 157.09 0 1 0 157.09 157.09A157.1 157.1 0 0 0 221.09 64Z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32px"></path>
+                                <path d="M338.29 338.29 448 448" fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32px"></path>
+                            </svg>
+                        </button>
+                        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown1" class="text-bpay-gris1 relative">
+                            <!-- <svg fill="currentColor" stroke-width="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="overflow: visible;" height="1.8em" width="1.8em">
+                                <path fill="currentColor" d="M20 17h2v2H2v-2h2v-7a8 8 0 1 1 16 0v7Zm-2 0v-7a6 6 0 0 0-12 0v7h12Zm-9 4h6v2H9v-2Z"></path>
+                            </svg> -->
+                            <svg fill="currentColor" stroke-width="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="1.9em" width="1.9em" style="overflow: visible;">
+                                <path fill="currentColor" d="M5 18h14v-6.969C19 7.148 15.866 4 12 4s-7 3.148-7 7.031V18Zm7-16c4.97 0 9 4.043 9 9.031V20H3v-8.969C3 6.043 7.03 2 12 2ZM9.5 21h5a2.5 2.5 0 0 1-5 0Z"></path>
+                            </svg>
+                            <span class="w-4 h-4 bg-bpay-violet rounded-full text-white text-[8px] font-bold absolute top-0 right-0 translate-x-1 -translate-y-1 flex flex-col justify-center items-center">12</span>
+                        </button>
+                        <div class="flex items-center cursor-pointer space-x-2" id="logoutButton" data-dropdown-toggle="dropdown2">
+                            <img src="../../assets/images/img-profile.jpg" alt="" class="w-10 h-10 rounded-full ring-2 ring-white object-cover object-center">
+                            <span class="text-sm text-bpay-gris4 font-medium">Mark Mufotino</span>
+                            <svg fill="currentColor" stroke-width="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="overflow: visible;" height="0.8em" width="0.8em">
+                                <path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"></path>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- notification content -->
+    <div id="dropdown1" class="hidden z-10 !mt-3 bg-gray-50 rounded-b-md max-h-[98vh] overflow-y-auto lg:w-[20%] font-Inter">
+        <ul class="space-y-2 ">
+            <li>
+                <a href="" class="flex items-stretch py-1 text-base space-x-2 px-2">
+                    <svg fill="none" class="p-1 bg-purple-200 rounded-full" stroke-width="0" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" viewBox="0 0 24 24" height="2em" width="2em" style="overflow: visible;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0M3.124 7.5A8.969 8.969 0 0 1 5.292 3m13.416 0a8.969 8.969 0 0 1 2.168 4.5"></path>
+                    </svg>
+                    <div class="w-full overflow-x-hidden self-center">
+                        <p class="text-xs font-medium ">
+                            Vous avez une nouvelle demande
+                        </p>
+                        <div class="text-bpay-gris4 text-xs">
+                            Just now
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="" class="flex items-stretch py-1 text-base space-x-2 px-2">
+                    <svg fill="none" class="p-1 bg-purple-200 rounded-full" stroke-width="0" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" viewBox="0 0 24 24" height="2em" width="2em" style="overflow: visible;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0M3.124 7.5A8.969 8.969 0 0 1 5.292 3m13.416 0a8.969 8.969 0 0 1 2.168 4.5"></path>
+                    </svg>
+                    <div class="w-full overflow-x-hidden self-center">
+                        <p class="text-xs font-medium ">
+                            Vous avez une nouvelle demande
+                        </p>
+                        <div class="text-bpay-gris4 text-xs">
+                            Just now
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="" class="flex items-stretch py-1 text-base space-x-2 px-2">
+                    <svg fill="none" class="p-1 bg-purple-200 rounded-full" stroke-width="0" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" viewBox="0 0 24 24" height="2em" width="2em" style="overflow: visible;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0M3.124 7.5A8.969 8.969 0 0 1 5.292 3m13.416 0a8.969 8.969 0 0 1 2.168 4.5"></path>
+                    </svg>
+                    <div class="w-full overflow-x-hidden self-center">
+                        <p class="text-xs font-medium ">
+                            Vous avez une nouvelle demande
+                        </p>
+                        <div class="text-bpay-gris4 text-xs">
+                            Just now
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Logout menu -->
+    <div id="dropdown2" class="hidden z-10 !mt-2 bg-gray-50 rounded-b-md overflow-y-auto w-[200px] font-Inter">
+        <ul class="space-y-2 ">
+            <li>
+                <a href="../../pages/profil/index.html" class="block px-4 py-2 hover:bg-bpay-bleuClaire hover:text-white mx-2 rounded-default font-bold text-xs">Mon profil</a>
+            </li>
+            <li>
+                <a href="" class="px-4 py-2 hover:bg-bpay-bleuClaire hover:text-white mx-2 rounded-default font-bold text-xs flex justify-between">
+                    <span>Se Deconnecter</span>
+                    <span>
+                        <svg fill="none" class="w-5 h-5 fill-current" stroke-width="2" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="overflow: visible;">
+                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"></path>
+                        </svg>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
     <!-- Content -->
     <div class="font-Poppins pl-[18%] md:pl-[13%] lg:pl-[22%] pr-[3%] lg:pr-[2%] py-5 ease-linear w-full content">
+        <div class="flex justify-between lg:justify-end gap-5 flex-wrap items-center">
+            <div>
+                <a href="../../pages/historique/portefueille.html" class="bg-bpay-bleuClaire text-white text-xs font-bold px-4 py-3 hover:shadow-default hover:shadow-bpay-bleuClaire rounded-default flex items-center space-x-2">
+                    <span class="hidden md:block">Mon portefueille</span>
+                </a>
+            </div>
+            <div>
+                <a href="../../pages/historique/vente.html" class="bg-bpay-vert text-white text-xs font-bold px-4 py-3 hover:shadow-default hover:shadow-bpay-vert rounded-default flex items-center space-x-2">
+                    <span class="hidden md:block">Mes ventes</span>
+                </a>
+            </div>
+            <div>
+                <a href="../../pages/historique/achats.html" class="bg-bpay-jaune text-white text-xs font-bold px-4 py-3 hover:shadow-default hover:shadow-bpay-jaune rounded-default flex items-center space-x-2">
+                    <span class="hidden md:block">Mes Achats</span>
+                </a>
+            </div>
+        </div>
         <div class="lg:space-x-3">
              <span class="font-bold lg:text-3xl">Historique Transaction</span>
              <span class="">1.2k dans</span>
@@ -290,6 +396,37 @@
             </tbody>
         </table>
     </div>
+
+     <!-- Modal de recherche -->
+     <div id="defaultModal" tabindex="-1" aria-hidden="true" class="fixed animate-fade-in transition-all duration-1000 ease-linear p-4 top-[90px] z-50 hidden w-full overflow-x-hidden overflow-y-auto max-h-full">
+         <div class="relative w-full lg:pl-[22%]">
+             <!-- Modal content -->
+             <div class="relative bg-white rounded-lg shadow">
+                 <!-- Modal header -->
+                 <div class="flex items-start justify-between p-4 border-b rounded-t">
+                     <h3 class="text-xl font-semibold">
+                         Faire une recherche
+                     </h3>
+                     <button type="button" class="bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center" data-modal-hide="defaultModal">
+                         <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                         </svg>
+                         <span class="sr-only">Close modal</span>
+                     </button>
+                 </div>
+                 <!-- Modal body -->
+                 <form action="" class="py-2 px-4">
+                     <div class="">
+                         <input type="search" name="" id="" class="focus:border-[1px] w-full focus:ring-0 outline-none px-3 rounded-lg border-[1px] border-bpay-gris1">
+                     </div>
+                     <button type="submit" class="bg-bpay-bleuClaire mt-4 rounded-default text-sm font-bold px-4 py-2 text-white">
+                         Rechercher
+                     </button>
+                 </form>
+             </div>
+         </div>
+     </div>
+
     <!-- Initialisation de AOS js-->
     <script>
         AOS.init();
