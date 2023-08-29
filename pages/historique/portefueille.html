@@ -30,6 +30,9 @@
     <!-- Fichier js  de Flowbite -->
     <script type="text/javascript" src="../../node_modules/flowbite/dist/flowbite.min.js"></script>
 
+    <!-- Fichier js  de chart js -->
+    <script type="text/javascript" src="../../node_modules/chart.js/dist/chart.umd.js"></script>
+
     <!-- Fichier css & js de dropzone -->
     <link rel="stylesheet" href="../../assets/css/dropzone.min.css">
     <script src="../../assets/js/dropzone.min.js"></script>
@@ -331,9 +334,9 @@
                     <div class="w-1/2 bg-bpay-vert3 h-4 rounded-full"></div>
                 </div>
 
-                <div class="flex flex-col lg:flex-row">
-                    <div class="lg:w-2/5 flex flex-col">
-                        <div class="flex justify-between items-center">
+                <div class="flex flex-col lg:flex-row lg:items-center">
+                    <div class="lg:w-2/5">
+                        <div class="flex">
                             <div class="space-y-1">
                                 <h2 class="font-bold">Résumé de la semaine</h2>
                                 <div class="flex space-x-2 items-center">
@@ -343,21 +346,24 @@
                                 </div>
                                 <div class="flex space-x-2 items-center">
                                     <span class="bg-bpay-jaune p-2 rounded-full"></span>
-                                    <span class="text-sm font-medium">revenus</span>
+                                    <span class="text-sm font-medium">Dépenses</span>
                                     <span class="text-sm font-bold">58%</span>
                                 </div>
                                 <div class="flex space-x-2 items-center">
                                     <span class="bg-bpay-rouge p-2 rounded-full"></span>
-                                    <span class="text-sm font-medium">revenus</span>
+                                    <span class="text-sm font-medium">Bonus</span>
                                     <span class="text-sm font-bold">58%</span>
                                 </div>
                             </div>
-                            <div class="bg-bpay-bleuClaire p-2 border-2 ">
+                            <div class="p-2 !h-[20vh] flex justify-center items-center -translate-x-20 ">
+                                <canvas id="grapheRondPart"></canvas>
                             </div>
                         </div>
                     </div>
-                    <div class="lg:w-3/5 border-2">
-
+                    <div class="lg:w-3/5">
+                        <div class="px-5 pb-5 w-full !h-[20vh] flex justify-center">
+                            <canvas id="grapheRondLigne"></canvas>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -790,6 +796,131 @@
                 $(".content").toggleClass("lg:pl-[22%] lg:pl-[7%]");
                 $(".toggle-btn").toggle(); // Bascule entre les boutons
             });
+        });
+    </script>
+
+    <!-- Script pour les graphiques Evolution -->
+    <script>
+        // Données du graphique en ligne
+        var data = {
+            labels: ['Revenus', 'Depenses', 'Bonus'],
+            datasets: [{
+                label: 'prix',
+                data: [600, 200, 300],
+                backgroundColor: [
+                    '#3DD598',
+                    '#FFB119',
+                    '#FC5A5A',
+                ],
+                borderWidth: 0,
+                hoverOffset: 5,
+            }]
+        };
+        // Options du graphique en ligne
+        var options = {
+            maintainAspectRatio: false,
+            layout: {
+            },
+            plugins: {
+                legend: {
+                    display: false, // Afficher les légendes
+                    position: 'bottom', // Position des légendes (peut être 'top', 'bottom', 'left', 'right')
+                },
+            }
+        };
+
+
+        // Création du graphique en rond Evolution
+        var ctxgrapheRondPart = document.getElementById('grapheRondPart').getContext('2d');
+        var grapheRondPart = new Chart(ctxgrapheRondPart, {
+            type: 'doughnut',
+            data: data,
+            options: options
+        });
+    </script>
+
+    <!-- Script pour les graphiques Montant total investit -->
+    <script>
+        // Semaine
+        // Données du graphique en ligne
+        var data = {
+            labels: ['Jan', 'Fev', 'Mars', 'Avril', 'Mai'],
+            datasets: [{
+                    label: 'Revenus',
+                    data: [0, 30, 35, 40, 50],
+                    backgroundColor: '#3DD598',
+                    borderColor: '#3DD598',
+                    borderWidth: 3,
+                    tension: 0.2,
+                },
+                {
+                    label: 'Depense',
+                    data: [0, 10, 20, 40, 30],
+                    backgroundColor: '#FFB119',
+                    borderColor: '#FFB119',
+                    borderWidth: 3,
+                    tension: 0.2,
+                },
+                {
+                    label: 'Bonus',
+                    data: [0, 20, 45, 44, 20],
+                    backgroundColor: '#FC5A5A',
+                    borderColor: '#FC5A5A',
+                    borderWidth: 3,
+                    tension: 0.2,
+                }
+            ],
+        };
+        // Options du graphique en ligne
+        var options = {
+            maintainAspectRatio: false,
+            layout: {
+                padding: {},
+            },
+            scales: {
+                y: {
+                    display: false,
+                    beginAtZero: true,
+                    grid: {
+                        display: false, // Masquer les lignes de quadrillage sur l'axe des X
+                    },
+                    border: {
+                        display: false,
+                    },
+                    ticks: {
+                        font: {
+                            family: 'Inter'
+                        }
+                    }
+                },
+                x: {
+                    display: false,
+                    border: {
+                        display: false,
+                    },
+                    grid: {
+                        display: false // Masquer les lignes de quadrillage sur l'axe des X
+                    },
+                    ticks: {
+                        font: {
+                            family: 'Inter'
+                        }
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false, // Afficher les légendes
+                }
+            }
+        };
+
+        // Création du graphique en ligne (semaine)
+        var ctxgrapheRondLigne = document.getElementById('grapheRondLigne').getContext('2d');
+        var grapheRondLigne = new Chart(ctxgrapheRondLigne, {
+            type: 'line',
+            data: data,
+            options: options
         });
     </script>
 </body>

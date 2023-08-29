@@ -29,6 +29,9 @@
     <!-- Fichier js  de Flowbite -->
     <script type="text/javascript" src="../../node_modules/flowbite/dist/flowbite.min.js"></script>
 
+    <!-- Fichier js  de chart js -->
+    <script type="text/javascript" src="../../node_modules/chart.js/dist/chart.umd.js"></script>
+
     <!-- Fichier css & js de dropzone -->
     <link rel="stylesheet" href="../../assets/css/dropzone.min.css">
     <script src="../../assets/js/dropzone.min.js"></script>
@@ -311,14 +314,14 @@
 
     <!-- Content -->
     <div class="font-Roboto pl-[18%] md:pl-[13%] lg:pl-[22%] pr-[3%] lg:pr-[2%] ease-linear w-full content">
-        <h2 class="my-3 font-bold  lg:text-base flex space-x-2">
+        <!-- <h2 class="my-3 font-bold  lg:text-base flex space-x-2">
             <span class="text-bpay-gris4 font-Inter">
                 <a href="../../pages/dashbord/index.html"> Graphiques </a>
             </span>
-        </h2>
+        </h2> -->
 
         <!-- Statistique -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 font-Inter font-bold text-bpay-gris4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 font-Inter font-bold text-bpay-gris4 my-5">
             <div class="bg-white rounded-default p-5 border-bpay-gris1 border-[1px] font-Poppins">
                 <h2 class="text-xs mb-2">Coût actuels</h2>
                 <div class="flex items-center space-x-4">
@@ -406,7 +409,8 @@
                            </div>
                         </div>
                     </div>
-                    <div class="p-5 h-[35vh]">
+                    <div class="px-5 pb-5 w-full lg:h-[40vh]">
+                        <canvas id="grapheRevenu"></canvas>
                     </div>
                 </div>
             </div>
@@ -420,7 +424,8 @@
                             <span class="w-1 h-1 rounded-full bg-bpay-gris4"></span>
                         </button>
                     </div>
-                    <div class="p-5 h-[47vh]">
+                    <div class="p-5 w-full lg:h-[52vh]">
+                        <canvas id="grapheEvolution"></canvas>
                     </div>
                 </div>
             </div>
@@ -428,10 +433,10 @@
 
         <!-- Evolution des investissement et transaction -->
         <div class="flex flex-col lg:flex-row items-center gap-5  mt-8 font-Inter mb-8">
-            <div class="lg:w-2/6">
+            <div class="w-full lg:w-2/6">
                 <h2 class="text-bpay-bleuClaire font-bold mb-3 p-1">L'Evolution des investissements</h2>
-                <div class="w-full  lg:h-[45vh]">
-                    <div class="bg-white rounded-lg p-3 flex items-center space-x-5 mb-3 w-full">
+                <div class="w-full">
+                    <div class="bg-white rounded-lg p-3 flex items-center space-x-5 mb-8 w-full">
                         <div class="bg-blue-200 text-green-600 p-3 rounded-lg">
                             <svg fill="none" stroke-width="1" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moneybag" width="2.5em" height="2.5em" viewBox="0 0 24 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="overflow: visible;">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -483,7 +488,7 @@
             </div>
             <div class="w-full lg:w-4/6">
                 <h2 class="text-bpay-bleuClaire font-bold mb-3 p-1">Dernière transations</h2>
-                <div class="bg-white lg:h-[45vh] rounded-default p-5">
+                <div class="bg-white rounded-default p-5">
                     <table class="w-full !overflow-x-auto">
                         <thead class="font-medium text-sm text-bpay-gris4  border-b-[1px] border-bpay-gris4">
                             <tr class="">
@@ -495,22 +500,6 @@
                             </tr>
                         </thead>
                         <tbody class="font-medium text-sm text-bpay-gris4 border-bpay-gris4">
-                            <tr class="border-b-[1px] border-bpay-gris1">
-                                <td class="py-3  flex space-x-3 items-center">
-                                    <span>
-                                        <img src="../../assets/images/img-profile.jpg" alt="" class="w-8 h-8 rounded-full object-center object-cover">
-                                    </span>
-                                    <span class="text-sm">Evelyn Freeman</span>
-                                </td>
-                                <td class="py-3 font-bold">Jeremy Rice</td>
-                                <td class="py-3 text-sm text-bpay-bleuFonce">744</td>
-                                <td class="py-3">
-                                    <span class="px-4 py-1 rounded-lg text-bpay-bleuClaire3">FCFA 422</span>
-                                </td>
-                                <td class="py-3">
-                                    <span class="px-4 py-1 rounded-lg">Il y a 1 j</span>
-                                </td>
-                            </tr>
                             <tr class="border-b-[1px] border-bpay-gris1">
                                 <td class="py-3  flex space-x-3 items-center">
                                     <span>
@@ -650,6 +639,129 @@
                 $(".content").toggleClass("lg:pl-[22%] lg:pl-[7%]");
                 $(".toggle-btn").toggle(); // Bascule entre les boutons
             });
+        });
+    </script>
+
+    <!-- Script pour les graphiques Montant total investit -->
+    <script>
+        // Semaine
+        // Données du graphique en ligne
+        var data = {
+            labels: ['Jan', 'Fev', 'Mars', 'Avril', 'Mai'],
+            datasets: [{
+                    label: 'coût',
+                    data: [80, 30, 50, 40, 50],
+                    backgroundColor: 'rgba(1, 5, 138, 1)',
+                    borderWidth: 0,
+                    fill: true,
+                },
+                {
+                    label: 'investit',
+                    data: [70, 10, 20, 40, 30],
+                    backgroundColor: 'rgba(26, 168, 233, 1)',
+                    borderWidth: 0,
+                    fill: true,
+                }
+            ],
+        };
+        // Options du graphique en ligne
+        var options = {
+        maintainAspectRatio: false,
+            layout: {
+                padding: {
+                },
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    grid: {
+                        display: true, // Masquer les lignes de quadrillage sur l'axe des X
+                    },
+                    border: {
+                    display: false,
+                    },
+                    ticks: {
+                        callback: function (value, index, values) { // Retourner les étiquettes personnalisées ici
+                        return 'FCFA ' + value + "M"; // Par exemple, affiche "Étiquette 10" pour la valeur 10
+                        },
+                        font: {
+                            weight: 'bold', // Rendre les étiquettes de l'axe des X en gras
+                            family: 'Poppins'
+                        }
+                    }
+                },
+                x: {
+                    grid: {
+                        display: false // Masquer les lignes de quadrillage sur l'axe des X
+                    },
+                    ticks: {
+                        font: {
+                            weight: 'bold', // Rendre les étiquettes de l'axe des X en gras
+                            family: 'Poppins'
+                        }
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false,// Afficher les légendes
+                }
+            }
+        };
+
+        // Création du graphique en ligne (semaine)
+        var ctxRevenu = document.getElementById('grapheRevenu').getContext('2d');
+        var grapheRevenu = new Chart(ctxRevenu, {
+            type: 'bar',
+            data: data,
+            options: options
+        });
+    </script>
+
+    <!-- Script pour les graphiques Evolution -->
+    <script>
+        // Données du graphique en ligne
+        var data = {
+            labels: ['rouge', 'vert', 'jaune', 'bleu', 'orange'],
+            datasets: [
+                {
+                    label: 'prix',
+                    data: [600, 200, 300, 150, 50],
+                    backgroundColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(54, 162, 235)',
+                    'rgb(255, 205, 86)',
+                    'rgb(255, 205, 46)',
+                    'rgb(255, 205, 96)',
+                    ],
+                    hoverOffset: 50,
+                }
+            ]
+        };
+        // Options du graphique en ligne
+        var options = {
+            maintainAspectRatio: false,
+            layout: {
+                padding: {
+                    bottom: 25,
+                    top: 25,
+                }
+            },
+            plugins: {
+                legend: {
+                    display: true, // Afficher les légendes
+                    position: 'bottom', // Position des légendes (peut être 'top', 'bottom', 'left', 'right')
+                },
+            }
+        };
+
+
+        // Création du graphique en rond Evolution
+        var ctxgrapheEvolution = document.getElementById('grapheEvolution').getContext('2d');
+        var grapheEvolution = new Chart(ctxgrapheEvolution, {
+            type: 'doughnut',
+            data: data,
+            options: options
         });
     </script>
 </body>
