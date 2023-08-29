@@ -1089,6 +1089,22 @@ input:checked + .toggle-bg {
   top: 90px;
 }
 
+.top-\[80px\] {
+  top: 80px;
+}
+
+.top-\[100px\] {
+  top: 100px;
+}
+
+.top-\[0px\] {
+  top: 0px;
+}
+
+.top-\[50px\] {
+  top: 50px;
+}
+
 .\!z-40 {
   z-index: 40 !important;
 }
@@ -1141,6 +1157,16 @@ input:checked + .toggle-bg {
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
+}
+
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .\!mt-2 {
@@ -1727,6 +1753,12 @@ input:checked + .toggle-bg {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+
+.space-x-10 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(2.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .divide-y-\[1px\] > :not([hidden]) ~ :not([hidden]) {
@@ -3025,6 +3057,12 @@ input:checked + .toggle-bg {
     --tw-space-y-reverse: 0;
     margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+  }
+
+  .lg\:space-x-16 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(4rem * var(--tw-space-x-reverse));
+    margin-left: calc(4rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .lg\:p-5 {
