@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B-Pay | Actions</title>
+    <title>B-Pay | Portefueille</title>
 
     <!-- Inclusion du la police inter & roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,6 +30,9 @@
     <!-- Fichier js  de Flowbite -->
     <script type="text/javascript" src="../../node_modules/flowbite/dist/flowbite.min.js"></script>
 
+    <!-- Fichier js  de chart js -->
+    <script type="text/javascript" src="../../node_modules/chart.js/dist/chart.umd.js"></script>
+
     <!-- Fichier css & js de dropzone -->
     <link rel="stylesheet" href="../../assets/css/dropzone.min.css">
     <script src="../../assets/js/dropzone.min.js"></script>
@@ -45,9 +48,9 @@
 
 <body class="w-full bg-bpay-grisBg">
 
-<!-- Sidebar -->
+    <!-- Sidebar -->
     <nav id="" class="sidebar w-[70%] md:w-[35%] lg:w-[20%] h-screen bg-bpay-bleuFonce z-40 dark:bg-bpay-blueDark fixed left-0 top-0 text-white !overflow-x-hidden overflow-y-auto">
-        <div >
+        <div>
             <div class="flex justify-between items-center p-4 h-[73px]" data-aos="zoom-out" data-aos-easing="linear" data-aos-duration="1000">
                 <div class="flex items-center space-x-2">
                     <img src="../../assets/images/img-logo.png" alt="Logo" class="h-[40px] txt">
@@ -84,7 +87,7 @@
                         </a>
                     </li>
 
-                    <li class="hover:bg-bpay-bleuClaire bg-bpay-bleuClaire text-white pl-6 py-2 rounded-r-lg">
+                    <li class="hover:bg-bpay-bleuClaire text-white pl-6 py-2 rounded-r-lg">
                         <a href="../../pages/action/index.html" class="flex items-center space-x-3">
                             <svg class="w-5 h-5 fill-current" stroke-width="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" style="overflow: visible;">
                                 <path fill-rule="evenodd" d="M14 5v1H2V5h12zM2 7h12v5H2V7zm12-3H2a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1zm-3 6h2v1h-2v-1z" clip-rule="evenodd"></path>
@@ -102,7 +105,7 @@
                         </a>
                     </li>
 
-                    <li class="hover:bg-bpay-bleuClaire text-white pl-6 py-2 rounded-r-lg">
+                    <li class="hover:bg-bpay-bleuClaire bg-bpay-bleuClaire text-white pl-6 py-2 rounded-r-lg">
                         <a href="../../pages/historique/index.html" class="flex items-center space-x-3">
                             <svg class="w-5 h-5 fill-current" stroke-width="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" style="overflow: visible;">
                                 <path d="M880 184H712v-64c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H384v-64c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H144c-17.7 0-32 14.3-32 32v664c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V216c0-17.7-14.3-32-32-32zm-40 656H184V460h656v380zM184 392V256h128v48c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-48h256v48c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-48h128v136H184z"></path>
@@ -188,7 +191,7 @@
                     <div class="font-bold text-base text-bpay-gris4 hidden md:block">
                         <div class="font-bold text-base  text-bpay-gris4 hidden md:block">
                             <div class="flex flex-col">
-                                <span class="font-bold font-Poppins">Achats d'actions</span>
+                                <span class="font-bold font-Poppins">Portefueille - Mon solde</span>
                             </div>
                         </div>
                     </div>
@@ -323,54 +326,43 @@
     </div>
 
     <!-- Content -->
-    <div class="pl-[18%] md:pl-[13%] lg:pl-[22%] pr-[3%] lg:pr-[2%]  ease-linear w-full content">
-        <!-- <h2 class="my-4 font-bold  lg:text-xl flex space-x-2">
-            <span class="text-bpay-bleuClaire font-Philosopher"><a href="../../pages/action/index.html"> Achat d'action</a></span>
-        </h2> -->
+    <div class="font-Poppins pl-[18%] md:pl-[13%] lg:pl-[22%] pr-[3%] lg:pr-[2%] py-5 ease-linear w-full content">
 
-        <div class="bg-white my-8 p-1 lg:p-5 rounded-default">
-
-            <div class="font-Poppins text-justify mb-6 lg:mb-10">
-                Projet à haut rendement avec une forte probabilité de profit, Investissement
-                minimum de 1200 FCFA (2.32 $) et plusieurs modes d’investissement avec
-                Contrat d'investissement et certificats nominatifs pour les parts acquises.
+        <div class="flex justify-between lg:justify-end gap-5 flex-wrap items-center mb-5">
+            <div>
+                <a href="../../pages/historique/index.html" class="bg-bpay-bleuClaire text-white text-sm font-bold px-4 py-3 hover:shadow-default  rounded-default flex items-center space-x-2">
+                    <span class="hidden md:block">Retour</span>
+                </a>
             </div>
+        </div>
 
-            <div class="w-full mx-auto">
-                <div class="lg:w-1/2 mx-auto border-2 border-bpay-gris1 border-dashed p-3 rounded-default font-Poppins space-y-4">
-                    <button class="bg-bpay-bleuClaire text-white px-6 py-2 rounded-default w-full text-center font-bold">
-                        Faire un don
-                    </button>
-                    <button class="bg-bpay-bleuClaire text-white px-6 py-2 rounded-default w-full text-center font-bold">
-                       Part d'action <span class="ml-2">x 1</span>
-                    </button>
-                    <button class="bg-bpay-bleuClaire text-white px-6 py-2 rounded-default w-full text-center font-bold">
-                       Part d'action <span class="ml-2">x 10</span>
-                    </button>
-                    <button class="bg-bpay-bleuClaire text-white px-6 py-2 rounded-default w-full text-center font-bold">
-                       Part d'action <span class="ml-2">x 15</span>
-                    </button>
-                    <button class="bg-bpay-bleuClaire text-white px-6 py-2 rounded-default w-full text-center font-bold">
-                       Part d'action <span class="ml-2">x 50</span>
-                    </button>
-                    <button class="bg-bpay-bleuClaire text-white px-6 py-2 rounded-default w-full text-center font-bold">
-                       Part d'action <span class="ml-2">x 123</span>
-                    </button>
-                    <button data-modal-target="shopModal" data-modal-toggle="shopModal" class="bg-bpay-vert text-white px-6 py-2 rounded-default w-full text-center font-bold">
-                       <div class="flex justify-center items-center ">
-                           <span>Confirmer votre investissement</span> 
-                           <span class="ml-4">
-                            <svg class="w-8 h-8 fill-current" stroke-width="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="overflow: visible;">
-                                <path d="M47.5 104H432V51.52a16 16 0 0 0-19.14-15.69l-368 60.48a16 16 0 0 0-12 10.47A39.69 39.69 0 0 1 47.5 104ZM463.5 128h-416a16 16 0 0 0-16 16v288a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V144a16 16 0 0 0-16-16ZM368 320a32 32 0 1 1 32-32 32 32 0 0 1-32 32Z"></path>
-                                <path d="M31.33 259.5V116c0-12.33 5.72-18.48 15.42-20 35.2-5.53 108.58-8.5 108.58-8.5s-8.33 16-27.33 16V128c18.5 0 31.33 23.5 31.33 23.5L84.83 236Z"></path>
-                            </svg>
-                           </span>
-                       </div>
-                    </button>
+        <div class="lg:h-[60vh] flex flex-col justify-center">
+            <div class="flex flex-col lg:flex-row gap-5 lg:gap-10 justify-between">
+
+                <div class="flex-1 flex flex-col justify-center bg-white p-5 rounded-lg space-y-8">
+                    <div class="font-medium text-lg">Solde total: </div>
+                    <div class="font-bold text-3xl"> CFA : 750 000 000 </div>
+                    <div class="flex space-x-3 text-xs">
+                        <span class="bg-green-300 p-1 rounded-default text-gray-700">+87%</span>
+                        <span class="bg-purple-400 p-1 rounded-default text-gray-700">FCFA 645.4856</span>
+                        <span class="bg-green-300 p-1 rounded-default text-gray-700">Retrait 12% Possible</span>
+                    </div>
+                </div>
+
+                <div class="flex-1 flex flex-col justify-center bg-white p-5 rounded-lg space-y-8">
+                    <div class="font-medium text-lg">Votre investissement du départ: </div>
+                    <div class="font-bold text-3xl"> 94 %</div>
+                    <div class="flex space-x-3 text-xs">
+                        <span class="bg-gray-300 p-1 rounded-default text-gray-700">Retrait 12% Possible</span>
+                        <span class="bg-gray-300 p-1 rounded-default text-gray-700">10% de gain de parrainnage</span>
+                    </div>
                 </div>
             </div>
-            
+                <button data-modal-target="shopModal" data-modal-toggle="shopModal" class="bg-bpay-vert w-full mx-auto text-center text-white mt-10 text-sm font-bold px-4 py-3 hover:shadow-default  rounded-default flex justify-center items-center space-x-2">
+                    <span class="hidden md:block">Faire un retrait de vos gains</span>
+                </button>
         </div>
+
     </div>
 
     <!-- Modal payement -->
@@ -390,7 +382,7 @@
                         <span class="sr-only">Close modal</span>
                     </button>
                 </div>
-                <!-- Modal Footer -->
+                <!-- Modal body -->
                 <div class="w-full">
                     <div class="">
                         <ul class="flex justify-center space-x-5 lg:space-x-16" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
@@ -583,6 +575,131 @@
                 $(".content").toggleClass("lg:pl-[22%] lg:pl-[7%]");
                 $(".toggle-btn").toggle(); // Bascule entre les boutons
             });
+        });
+    </script>
+
+    <!-- Script pour les graphiques Evolution -->
+    <script>
+        // Données du graphique en ligne
+        var data = {
+            labels: ['Revenus', 'Depenses', 'Bonus'],
+            datasets: [{
+                label: 'prix',
+                data: [600, 200, 300],
+                backgroundColor: [
+                    '#3DD598',
+                    '#FFB119',
+                    '#FC5A5A',
+                ],
+                borderWidth: 0,
+                hoverOffset: 15,
+            }]
+        };
+        // Options du graphique en ligne
+        var options = {
+            maintainAspectRatio: false,
+            layout: {},
+            plugins: {
+                legend: {
+                    display: false, // Afficher les légendes
+                    position: 'bottom', // Position des légendes (peut être 'top', 'bottom', 'left', 'right')
+                },
+            }
+        };
+
+
+        // Création du graphique en rond Evolution
+        var ctxgrapheRondPart = document.getElementById('grapheRondPart').getContext('2d');
+        var grapheRondPart = new Chart(ctxgrapheRondPart, {
+            type: 'doughnut',
+            data: data,
+            options: options
+        });
+    </script>
+
+    <!-- Script pour les graphiques Montant total investit -->
+    <script>
+        // Semaine
+        // Données du graphique en ligne
+        var data = {
+            labels: ['Jan', 'Fev', 'Mars', 'Avril', 'Mai'],
+            datasets: [{
+                    label: 'Revenus',
+                    data: [0, 30, 35, 40, 50],
+                    backgroundColor: '#3DD598',
+                    borderColor: '#3DD598',
+                    borderWidth: 3,
+                    tension: 0.2,
+                },
+                {
+                    label: 'Depense',
+                    data: [0, 10, 20, 40, 30],
+                    backgroundColor: '#FFB119',
+                    borderColor: '#FFB119',
+                    borderWidth: 3,
+                    tension: 0.2,
+                },
+                {
+                    label: 'Bonus',
+                    data: [0, 20, 45, 44, 20],
+                    backgroundColor: '#FC5A5A',
+                    borderColor: '#FC5A5A',
+                    borderWidth: 3,
+                    tension: 0.2,
+                }
+            ],
+        };
+        // Options du graphique en ligne
+        var options = {
+            pointStyle: false,
+            maintainAspectRatio: false,
+            layout: {
+                padding: {},
+            },
+            scales: {
+                y: {
+                    display: false,
+                    beginAtZero: true,
+                    grid: {
+                        display: false, // Masquer les lignes de quadrillage sur l'axe des X
+                    },
+                    border: {
+                        display: false,
+                    },
+                    ticks: {
+                        font: {
+                            family: 'Inter'
+                        }
+                    }
+                },
+                x: {
+                    display: false,
+                    border: {
+                        display: false,
+                    },
+                    grid: {
+                        display: false // Masquer les lignes de quadrillage sur l'axe des X
+                    },
+                    ticks: {
+                        font: {
+                            family: 'Inter'
+                        }
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false, // Afficher les légendes
+                }
+            }
+        };
+
+        // Création du graphique en ligne (semaine)
+        var ctxgrapheRondLigne = document.getElementById('grapheRondLigne').getContext('2d');
+        var grapheRondLigne = new Chart(ctxgrapheRondLigne, {
+            type: 'line',
+            data: data,
+            options: options
         });
     </script>
 </body>
