@@ -199,7 +199,7 @@
     <div class="!z-40">
         <div class="font-Poppins text-bpay-gris1 py-[17px] bg-white shadow-xs">
             <div class="pl-[18%] md:pl-[13%] lg:pl-[22%] pr-[3%] lg:pr-[2%] transition-all duration-1000 ease-linear w-full content">
-                <div class="flex justify-between items-center">
+                <div class="flex justify-end md:justify-between items-center">
                     <div class="font-bold text-base text-bpay-gris4 hidden md:block">
                         <div class="font-bold text-base  text-bpay-gris4 hidden md:block">
                             <div class="flex flex-col">
@@ -347,7 +347,7 @@
         </h2> -->
 
         <!-- Statistique -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 font-Poppins font-bold text-bpay-gris4 my-5">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 font-Poppins font-bold text-bpay-gris4 my-5">
             <div class="bg-white rounded-default p-5 border-bpay-gris1 border-[1px] font-Poppins" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
                 <h2 class="text-xs mb-2">Coût actuels</h2>
                 <div class="flex items-center space-x-4">
@@ -512,29 +512,31 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Dernières transactions -->
             <div class="w-full lg:w-4/6">
                 <h2 class="text-bpay-bleuClaire font-bold mb-3 p-1">Dernière transations</h2>
-                <div class="bg-white rounded-default p-5">
-                    <table class="w-full !overflow-x-auto">
+                <div class="bg-white rounded-default p-5 overflow-auto">
+                    <table class="relative w-full !overflow-x-auto">
                         <thead class="font-medium text-sm text-bpay-gris4  border-b-[1px] border-bpay-gris4">
                             <tr class="">
-                                <td class="pb-3">Moyens de paiement</td>
-                                <td class="pb-3">Acheteur</td>
-                                <td class="pb-3">Parts</td>
-                                <td class="pb-3">Montant</td>
-                                <td class="pb-3">Durée</td>
+                                <th class="pb-3 px-3">Moyens de paiement</th>
+                                <th class="pb-3 px-3">Acheteur</th>
+                                <th class="pb-3 px-3">Parts</th>
+                                <th class="pb-3 px-3">Montant</th>
+                                <th class="pb-3 px-3">Durée</th>
                             </tr>
                         </thead>
                         <tbody class="font-medium text-sm text-bpay-gris4 border-bpay-gris4">
                             <tr class="border-b-[1px] border-bpay-gris1">
-                                <td class="py-3  flex space-x-3 items-center">
+                                <td class="py-3 px-3  flex space-x-3 items-center">
                                     <span>
                                         <img src="../../assets/images/img-profile.jpg" alt="" class="w-8 h-8 rounded-full object-center object-cover">
                                     </span>
                                     <span class="text-sm">Evelyn Freeman</span>
                                 </td>
-                                <td class="py-3 font-bold">Jeremy Rice</td>
-                                <td class="py-3 text-sm text-bpay-bleuFonce">744</td>
+                                <td class="py-3 px-3 font-bold">Jeremy Rice</td>
+                                <td class="py-3 px-3 text-sm text-bpay-bleuFonce">744</td>
                                 <td class="py-3">
                                     <span class="px-4 py-1 rounded-lg text-bpay-bleuClaire3">FCFA 422</span>
                                 </td>
@@ -543,14 +545,14 @@
                                 </td>
                             </tr>
                             <tr class="border-b-[1px] border-bpay-gris1">
-                                <td class="py-3  flex space-x-3 items-center">
+                                <td class="py-3 px-3  flex space-x-3 items-center">
                                     <span>
                                         <img src="../../assets/images/img-profile.jpg" alt="" class="w-8 h-8 rounded-full object-center object-cover">
                                     </span>
                                     <span class="text-sm">Evelyn Freeman</span>
                                 </td>
-                                <td class="py-3 font-bold">Jeremy Rice</td>
-                                <td class="py-3 text-sm text-bpay-bleuFonce">744</td>
+                                <td class="py-3 px-3 font-bold">Jeremy Rice</td>
+                                <td class="py-3 px-3 text-sm text-bpay-bleuFonce">744</td>
                                 <td class="py-3">
                                     <span class="px-4 py-1 rounded-lg text-bpay-bleuClaire3">FCFA 422</span>
                                 </td>
@@ -559,18 +561,18 @@
                                 </td>
                             </tr>
                             <tr class="border-b-[1px] border-bpay-gris1">
-                                <td class="py-3  flex space-x-3 items-center">
+                                <td class="py-3 px-3  flex space-x-3 items-center">
                                     <span>
                                         <img src="../../assets/images/img-profile.jpg" alt="" class="w-8 h-8 rounded-full object-center object-cover">
                                     </span>
                                     <span class="text-sm">Evelyn Freeman</span>
                                 </td>
-                                <td class="py-3 font-bold">Jeremy Rice</td>
-                                <td class="py-3 text-sm text-bpay-bleuFonce">744</td>
-                                <td class="py-3">
+                                <td class="py-3 px-3 font-bold">Jeremy Rice</td>
+                                <td class="py-3 px-3 text-sm text-bpay-bleuFonce">744</td>
+                                <td class="py-3 px-3">
                                     <span class="px-4 py-1 rounded-lg text-bpay-bleuClaire3">FCFA 422</span>
                                 </td>
-                                <td class="py-3">
+                                <td class="py-3 px-3">
                                     <span class="px-4 py-1 rounded-lg">Il y a 1 j</span>
                                 </td>
                             </tr>

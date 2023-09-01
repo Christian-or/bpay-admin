@@ -184,7 +184,7 @@
     <div class="!z-40">
         <div class="font-Poppins text-bpay-gris1 py-[17px] bg-white shadow-xs">
             <div class="pl-[18%] md:pl-[13%] lg:pl-[22%] pr-[3%] lg:pr-[2%] transition-all duration-1000 ease-linear w-full content">
-                <div class="flex justify-between items-center">
+                <div class="flex justify-end md:justify-between items-center">
                     <div class="font-bold text-base text-bpay-gris4 hidden md:block">
                         <div class="font-bold text-base  text-bpay-gris4 hidden md:block">
                             <div class="flex flex-col">
@@ -327,7 +327,7 @@
         <div class="flex justify-between lg:justify-end gap-5 flex-wrap items-center">
             <div>
                 <a href="../../pages/historique/index.html" class="bg-bpay-bleuClaire text-white text-xs font-bold px-4 py-3 hover:shadow-default hover:shadow-bpay-bleuClaire rounded-default flex items-center space-x-2">
-                    <span class="hidden md:block">Retour</span>
+                    <span class="">Retour</span>
                 </a>
             </div>
         </div>
@@ -367,68 +367,70 @@
 
                 </div>
             </div>
-            <table class="w-full">
-                <th class="flex justify-between items-center w-full  !text-bpay-gris1 text-center ">
-                    <tr class="w-full text-bpay-gris1 uppercase font-bold text-sm text-center border-b-[1px] border-bpay-gris1">
-                        <td class="w-1/12  pb-4">ID</td>
-                        <td class="w-1/12 pb-4">Fournisseur</td>
-                        <td class="w-1/12 pb-4">Monttant</td>
-                        <td class="w-2/12 pb-4">Payement </td>
-                        <td class="w-1/12 pb-4">Date</td>
-                        <td class="w-1/12 pb-4">Statut</td>
-                    </tr>
-                </th>
-                <tbody class="text-center">
-                    <tr class="text-xs font-medium border-b-[1px] border-bpay-gris1">
-                        <td class=" py-4">0025478</td>
-                        <td class="py-4">Didier Kouagou</td>
-                        <td class="py-4">6500 $</td>
-                        <td class="py-4">Mastercard</td>
-                        <td class="py-4">15-04-23 12:45:12</td>
-                        <td class="py-4"><span class="p-1 rounded-lg bg-green-200 text-gray-700">Terminé</span></td>
-                    </tr>
-                    <tr class="text-xs font-medium border-b-[1px] border-bpay-gris1">
-                        <td class=" py-4">0025478</td>
-                        <td class="py-4">Didier Kouagou</td>
-                        <td class="py-4">6500 $</td>
-                        <td class="py-4">Mastercard</td>
-                        <td class="py-4">15-04-23 12:45:12</td>
-                        <td class="py-4"><span class="p-1 rounded-lg bg-red-200 text-gray-700">Echoué</span></td>
-                    </tr>
-                    <tr class="text-xs font-medium border-b-[1px] border-bpay-gris1">
-                        <td class=" py-4">0025478</td>
-                        <td class="py-4">Didier Kouagou</td>
-                        <td class="py-4">6500 $</td>
-                        <td class="py-4">Mastercard</td>
-                        <td class="py-4">15-04-23 12:45:12</td>
-                        <td class="py-4"><span class="p-1 rounded-lg bg-yellow-200 text-gray-700">En attente</span></td>
-                    </tr>
-                    <tr class="text-xs font-medium border-b-[1px] border-bpay-gris1">
-                        <td class=" py-4">0025478</td>
-                        <td class="py-4">Didier Kouagou</td>
-                        <td class="py-4">6500 $</td>
-                        <td class="py-4">Mastercard</td>
-                        <td class="py-4">15-04-23 12:45:12</td>
-                        <td class="py-4"><span class="p-1 rounded-lg bg-green-200 text-gray-700">Terminé</span></td>
-                    </tr>
-                    <tr class="text-xs font-medium border-b-[1px] border-bpay-gris1">
-                        <td class=" py-4">0025478</td>
-                        <td class="py-4">Didier Kouagou</td>
-                        <td class="py-4">6500 $</td>
-                        <td class="py-4">Mastercard</td>
-                        <td class="py-4">15-04-23 12:45:12</td>
-                        <td class="py-4"><span class="p-1 rounded-lg bg-red-200 text-gray-700">Echoué</span></td>
-                    </tr>
-                    <tr class="text-xs font-medium border-b-[1px] border-bpay-gris1">
-                        <td class=" py-4">0025478</td>
-                        <td class="py-4">Didier Kouagou</td>
-                        <td class="py-4">6500 $</td>
-                        <td class="py-4">Mastercard</td>
-                        <td class="py-4">15-04-23 12:45:12</td>
-                        <td class="py-4"><span class="p-1 rounded-lg bg-yellow-200 text-gray-700">En attente</span></td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="bg-white overflow-auto">
+                <table class="w-full">
+                    <th class="flex justify-between items-center w-full  !text-bpay-gris1 text-center ">
+                        <tr class="w-full text-bpay-gris1 uppercase font-bold text-sm text-center border-b-[1px] border-bpay-gris1">
+                            <td class="w-1/12  pb-4 px-3">ID</td>
+                            <td class="w-1/12 pb-4 px-3">Fournisseur</td>
+                            <td class="w-1/12 pb-4 px-3">Monttant</td>
+                            <td class="w-2/12 pb-4 px-3">Payement </td>
+                            <td class="w-1/12 pb-4 px-3">Date</td>
+                            <td class="w-1/12 pb-4 px-3">Statut</td>
+                        </tr>
+                    </th>
+                    <tbody class="text-center">
+                        <tr class="text-xs font-medium border-b-[1px] border-bpay-gris1">
+                            <td class="py-4 px-3">0025478</td>
+                            <td class="py-4 px-3">Didier Kouagou</td>
+                            <td class="py-4 px-3">6500 $</td>
+                            <td class="py-4 px-3">Mastercard</td>
+                            <td class="py-4 px-3">15-04-23 12:45:12</td>
+                            <td class="py-4 px-3"><span class="p-1 rounded-lg bg-green-200 text-gray-700">Terminé</span></td>
+                        </tr>
+                        <tr class="text-xs font-medium border-b-[1px] border-bpay-gris1">
+                            <td class=" py-4 px-3">0025478</td>
+                            <td class="py-4 px-3">Didier Kouagou</td>
+                            <td class="py-4 px-3">6500 $</td>
+                            <td class="py-4 px-3">Mastercard</td>
+                            <td class="py-4 px-3">15-04-23 12:45:12</td>
+                            <td class="py-4 px-3"><span class="p-1 rounded-lg bg-red-200 text-gray-700">Echoué</span></td>
+                        </tr>
+                        <tr class="text-xs font-medium border-b-[1px] border-bpay-gris1">
+                            <td class=" py-4 px-3">0025478</td>
+                            <td class="py-4 px-3">Didier Kouagou</td>
+                            <td class="py-4 px-3">6500 $</td>
+                            <td class="py-4 px-3">Mastercard</td>
+                            <td class="py-4 px-3">15-04-23 12:45:12</td>
+                            <td class="py-4 px-3"><span class="p-1 rounded-lg bg-yellow-200 text-gray-700">En attente</span></td>
+                        </tr>
+                        <tr class="text-xs font-medium border-b-[1px] border-bpay-gris1">
+                            <td class=" py-4 px-3">0025478</td>
+                            <td class="py-4 px-3">Didier Kouagou</td>
+                            <td class="py-4 px-3">6500 $</td>
+                            <td class="py-4 px-3">Mastercard</td>
+                            <td class="py-4 px-3">15-04-23 12:45:12</td>
+                            <td class="py-4 px-3"><span class="p-1 rounded-lg bg-green-200 text-gray-700">Terminé</span></td>
+                        </tr>
+                        <tr class="text-xs font-medium border-b-[1px] border-bpay-gris1">
+                            <td class=" py-4 px-3">0025478</td>
+                            <td class="py-4 px-3">Didier Kouagou</td>
+                            <td class="py-4 px-3">6500 $</td>
+                            <td class="py-4 px-3">Mastercard</td>
+                            <td class="py-4 px-3">15-04-23 12:45:12</td>
+                            <td class="py-4 px-3"><span class="p-1 rounded-lg bg-red-200 text-gray-700">Echoué</span></td>
+                        </tr>
+                        <tr class="text-xs font-medium border-b-[1px] border-bpay-gris1">
+                            <td class=" py-4 px-3">0025478</td>
+                            <td class="py-4 px-3">Didier Kouagou</td>
+                            <td class="py-4 px-3">6500 $</td>
+                            <td class="py-4 px-3">Mastercard</td>
+                            <td class="py-4 px-3">15-04-23 12:45:12</td>
+                            <td class="py-4 px-3"><span class="p-1 rounded-lg bg-yellow-200 text-gray-700">En attente</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 

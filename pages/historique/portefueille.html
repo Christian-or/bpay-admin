@@ -191,7 +191,7 @@
      <div class="!z-40">
          <div class="font-Poppins text-bpay-gris1 py-[17px] bg-white shadow-xs">
              <div class="pl-[18%] md:pl-[13%] lg:pl-[22%] pr-[3%] lg:pr-[2%] transition-all duration-1000 ease-linear w-full content">
-                 <div class="flex justify-between items-center">
+                 <div class="flex justify-end md:justify-between items-center">
                      <div class="font-bold text-base text-bpay-gris4 hidden md:block">
                          <div class="font-bold text-base  text-bpay-gris4 hidden md:block">
                              <div class="flex flex-col">
@@ -332,20 +332,20 @@
     <!-- Content -->
     <div class="font-Poppins pl-[18%] md:pl-[13%] lg:pl-[22%] pr-[3%] lg:pr-[2%] py-5 ease-linear w-full content">
 
-        <div class="flex justify-between lg:justify-end gap-5 flex-wrap items-center mb-5">
+        <div class="flex justify-between lg:justify-end gap-5 items-center mb-5">
             <div>
                 <a href="../../pages/historique/index.html" class="bg-bpay-bleuClaire text-white text-sm font-bold px-4 py-3 hover:shadow-default  rounded-default flex items-center space-x-2">
-                    <span class="hidden md:block">Retour</span>
+                    <span class="">Retour</span>
                 </a>
             </div>
             <div>
                 <a href="../../pages/historique/gains.html" class="bg-bpay-vert text-white text-sm font-bold px-4 py-3 hover:shadow-default  rounded-default flex items-center space-x-2">
-                    <span class="hidden md:block">Retrait de gain</span>
+                    <span class="">Retrait de gain</span>
                 </a>
             </div>
             <div>
                 <button data-modal-target="partModal1" data-modal-toggle="partModal1" class="bg-bpay-vert2 text-white text-sm font-bold px-4 py-3 hover:shadow-default rounded-default flex items-center space-x-2">
-                    <span class="hidden md:block">Vente de part</span>
+                    <span class="">Vente de part</span>
                 </button>
             </div>
         </div>
@@ -754,109 +754,7 @@
             </div>
         </div>
 
-        <div class="bg-bpay-bleuClaire3 p-5 rounded-md mt-5">
-            <div class="text-center lg:text-xl font-medium text-white">
-                <h2 class="uppercase">Transfert de parts</h2>
-                <h3>Vous avez la possibilité de transferer vos parts vers un projet au choix.</h3>
-            </div>
 
-            <hr class="lg:w-[80%] mx-auto h-[4px] bg-white border-0 my-4">
-
-            <div class="bg-white lg:w-2/3 mx-auto p-5 rounded-xl text-gray-700">
-                <div class="text-center text-sm font-medium text-gray-700">
-                    <span class="block">Vendez vos actions à qui vous voulez où et quand vous le voulez</span>
-                    <span class="block">Avant toute transaction, prenez vos fonds</span>
-                </div>
-                <div class="flex flex-col">
-                    <div class="flex flex-col space-y-1">
-                        <label for="" class="text-xs font-medium">Nombre de part</label>
-                        <input type="text" placeholder="Le nombre de part à vendre" class="rounded-xl px-4 py-2 font-medium text-sm focus:border-none outline-none focus:ring-1 focus:ring-bpay-bleuClaire3">
-                    </div>
-    
-                    <div class="mx-auto my-3 font-bold">
-                        <span>Vers</span>
-                    </div>
-    
-                    <div class="flex flex-col space-y-1">
-                        <label for="" class="text-xs font-medium">ID receveur</label>
-                        <input type="text" placeholder="Id du receveur" class="rounded-xl px-4 py-2 font-medium text-sm focus:border-none outline-none focus:ring-1 focus:ring-bpay-bleuClaire3">
-                    </div>
-                    <div class="flex justify-around mt-5">
-                        <button class="bg-bpay-bleuClaire text-white text-sm font-bold px-4 lg:px-8 py-3 hover:shadow-default  rounded-full flex items-center space-x-2">
-                            <span class="">Annuler</span>
-                        </button>
-                        <button class="bg-bpay-bleuClaire text-white text-sm font-bold px-4 lg:px-8 py-3 hover:shadow-default  rounded-full flex items-center space-x-2">
-                            <span class="">Transférer</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="bg-bpay-bleuClaire3 p-5 rounded-md mt-5">
-            <div class="text-center lg:text-xl font-medium text-white">
-                <h2 class="uppercase">En cours......</h2>
-            </div>
-
-            <hr class="lg:w-[80%] mx-auto h-[4px] bg-white border-0 my-4">
-
-            <div class="bg-white lg:w-2/3 mx-auto p-5 rounded-xl text-gray-700 h-[50vh]">
-                <div class="w-full h-full flex flex-col justify-between items-center">
-                    <div></div>
-                    <div class="w-2/3 mx-auto border-2 border-bpay-gris3 rounded-full h-4">
-                        <div class="w-1/2 bg-bpay-bleuFonce h-3 rounded-full text-xs flex justify-center items-center text-white">50%</div>
-                    </div>
-                    <button class="bg-bpay-bleuClaire justify-self-end text-white text-sm font-bold px-4 lg:px-8 py-3 hover:shadow-default  rounded-full flex items-center space-x-2">
-                        <span class="">Suivant</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <div class="bg-bpay-bleuClaire3 p-5 rounded-md mt-5">
-            <div class="text-center lg:text-xl font-medium text-white">
-                <h2 class="uppercase">En cours......</h2>
-            </div>
-
-            <hr class="lg:w-[80%] mx-auto h-[4px] bg-white border-0 my-4">
-
-            <div class="bg-white lg:w-2/3 mx-auto p-5 rounded-xl text-gray-700 h-[50vh]">
-                <div class="w-full h-full flex flex-col justify-between items-center">
-                    <div></div>
-                    <div class="w-2/3 mx-auto border-2 border-bpay-gris3 rounded-full h-4">
-                        <div class="w-full bg-bpay-bleuFonce h-3 rounded-full text-xs flex justify-center items-center text-white">100%</div>
-                    </div>
-                    <button class="bg-bpay-bleuClaire justify-self-end text-white text-sm font-bold px-4 lg:px-8 py-3 hover:shadow-default  rounded-full flex items-center space-x-2">
-                        <span class="">Suivant</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <div class="bg-bpay-bleuClaire3 p-5 rounded-md mt-5">
-            <div class="text-center lg:text-xl font-medium text-white">
-                <h2 class="uppercase font-bold">Transfert terminé</h2>
-            </div>
-
-            <hr class="lg:w-[80%] mx-auto h-[4px] bg-white border-0 my-4">
-
-            <div class="bg-white lg:w-2/3 mx-auto p-5 rounded-xl text-gray-700 h-[50vh]">
-                <div class="w-full h-full flex flex-col justify-between items-center">
-                    <div></div>
-                    <button class="bg-bpay-vert justify-self-end text-white text-sm font-bold px-4 lg:px-8 py-3 hover:shadow-default  rounded-full flex items-center space-x-2">
-                        <span>
-                            <svg fill="currentColor" stroke-width="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="overflow: visible;" height="1.5em" width="1.5em">
-                                <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7l233.4-233.3c12.5-12.5 32.8-12.5 45.3 0z"></path>
-                            </svg>
-                        </span>
-                        <span class="">Envoyer avec succès</span>
-                    </button>
-                    <button class="bg-bpay-bleuClaire justify-self-end text-white text-sm font-bold px-4 lg:px-8 py-3 hover:shadow-default  rounded-full flex items-center space-x-2">
-                        <span class="">Valide</span>
-                    </button>
-                </div>
-            </div>
-        </div>
     </div>
 
     <!-- Modal de transfert de part1 -->

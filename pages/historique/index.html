@@ -184,7 +184,7 @@
     <div class="!z-40">
         <div class="font-Poppins text-bpay-gris1 py-[17px] bg-white shadow-xs">
             <div class="pl-[18%] md:pl-[13%] lg:pl-[22%] pr-[3%] lg:pr-[2%] transition-all duration-1000 ease-linear w-full content">
-                <div class="flex justify-between items-center">
+                <div class="flex justify-end md:justify-between items-center">
                     <div class="font-bold text-base text-bpay-gris4 hidden md:block">
                         <div class="font-bold text-base  text-bpay-gris4 hidden md:block">
                             <div class="flex flex-col">
@@ -325,25 +325,25 @@
     <!-- Content -->
     <div class="font-Poppins pl-[18%] md:pl-[13%] lg:pl-[22%] pr-[3%] lg:pr-[2%] py-5 ease-linear w-full content">
         
-        <div class="flex justify-between lg:justify-end gap-5 flex-wrap items-center">
+        <div class="flex justify-between lg:justify-end gap-5 items-center">
             <div>
                 <a href="../../pages/historique/portefueille.html" class="bg-bpay-bleuClaire text-white text-xs font-bold px-4 py-3 hover:shadow-default hover:shadow-bpay-bleuClaire rounded-default flex items-center space-x-2">
-                    <span class="hidden md:block">Mon portefueille</span>
+                    <span class="">Mon portefueille</span>
                 </a>
             </div>
             <div>
                 <a href="../../pages/historique/vente.html" class="bg-bpay-vert text-white text-xs font-bold px-4 py-3 hover:shadow-default hover:shadow-bpay-vert rounded-default flex items-center space-x-2">
-                    <span class="hidden md:block">Mes ventes</span>
+                    <span class="">Mes ventes</span>
                 </a>
             </div>
             <div>
                 <a href="../../pages/historique/achats.html" class="bg-bpay-jaune text-white text-xs font-bold px-4 py-3 hover:shadow-default hover:shadow-bpay-jaune rounded-default flex items-center space-x-2">
-                    <span class="hidden md:block">Mes Achats</span>
+                    <span class="">Mes Achats</span>
                 </a>
             </div>
         </div>
 
-        <div class="bg-white p-5 rounded-lg my-5">
+        <div class="bg-white p-5 rounded-lg my-5 relative overflow-auto">
             <div class="lg:space-x-3">
                  <span class="font-bold lg:text-3xl">Historique Transaction</span>
                  <span class="">1.2k dans</span>
@@ -381,82 +381,85 @@
 
                 </div>
             </div>
-            <table class="w-full">
-                <th class="flex justify-between items-center w-full  !text-bpay-gris1 text-center ">
-                    <tr class="w-full text-bpay-gris1 uppercase  font-bold text-xs text-start border-b-[1px] border-bpay-gris1">
-                        <td class="w-1/6 text-start pb-4">ID Trensaction</td>
-                        <td class="w-1/6 pb-4">Valeur de part</td>
-                        <td class="w-1/6 pb-4">Nombre de parts</td>
-                        <td class="w-1/6 pb-4">Type</td>
-                        <td class="w-1/6 pb-4">Monttant <span class="text-[8px]">(fca)</span></td>
-                        <td class="w-1/6 pb-4">Date</td>
-                        <td class="w-1/6 pb-4">Statut Transaction</td>
-                        <td class="w-1/6 pb-4">Taxe</td>
-                    </tr>
-                </th>
-                <tbody class="text-start text-xs">
-                    <tr class="font-medium border-b-[1px] border-bpay-gris1 text-gray-700">
-                        <td class="text-start py-4">0025478</td>
-                        <td class="py-4">120</td>
-                        <td class="py-4">450</td>
-                        <td class="py-4">Investit</td>
-                        <td class="py-4">50 000</td>
-                        <td class="py-4">15-04-23 12:45:12</td>
-                        <td class="py-4"><span class="p-1 rounded-lg bg-red-200 text-gray-700">Echoué</span></td>
-                        <td class="py-4">0</td>
-                    </tr>
-                    <tr class="font-medium border-b-[1px] border-bpay-gris1 text-gray-700">
-                        <td class="text-start py-4">0025478</td>
-                        <td class="py-4">120</td>
-                        <td class="py-4">450</td>
-                        <td class="py-4">Investit</td>
-                        <td class="py-4">50 000</td>
-                        <td class="py-4">15-04-23 12:45:12</td>
-                        <td class="py-4"><span class="p-1 rounded-lg bg-green-200 text-gray-700">Terminé</span></td>
-                        <td class="py-4">0</td>
-                    </tr>
-                    <tr class="font-medium border-b-[1px] border-bpay-gris1 text-gray-700">
-                        <td class="text-start py-4">0025478</td>
-                        <td class="py-4">120</td>
-                        <td class="py-4">450</td>
-                        <td class="py-4">Investit</td>
-                        <td class="py-4">50 000</td>
-                        <td class="py-4">15-04-23 </td>
-                        <td class="py-4"><span class="p-1 rounded-lg bg-yellow-200 text-gray-700">En cours</span></td>
-                        <td class="py-4">0</td>
-                    </tr>
-                    <tr class="font-medium border-b-[1px] border-bpay-gris1 text-gray-700">
-                        <td class="text-start py-4">0025478</td>
-                        <td class="py-4">120</td>
-                        <td class="py-4">450</td>
-                        <td class="py-4">Investit</td>
-                        <td class="py-4">50 000</td>
-                        <td class="py-4">15-04-23 12:45:12</td>
-                        <td class="py-4"><span class="p-1 rounded-lg bg-red-200 text-gray-700">Echoué</span></td>
-                        <td class="py-4">0</td>
-                    </tr>
-                    <tr class="font-medium border-b-[1px] border-bpay-gris1 text-gray-700">
-                        <td class="text-start py-4">0025478</td>
-                        <td class="py-4">120</td>
-                        <td class="py-4">450</td>
-                        <td class="py-4">Investit</td>
-                        <td class="py-4">50 000</td>
-                        <td class="py-4">15-04-23 12:45:12</td>
-                        <td class="py-4"><span class="p-1 rounded-lg bg-green-200 text-gray-700">Terminé</span></td>
-                        <td class="py-4">0</td>
-                    </tr>
-                    <tr class="font-medium border-b-[1px] border-bpay-gris1 text-gray-700">
-                        <td class="text-start py-4">0025478</td>
-                        <td class="py-4">120</td>
-                        <td class="py-4">450</td>
-                        <td class="py-4">Investit</td>
-                        <td class="py-4">50 000</td>
-                        <td class="py-4">15-04-23 12:45:12</td>
-                        <td class="py-4"><span class="p-1 rounded-lg bg-yellow-200 text-gray-700">En cours</span></td>
-                        <td class="py-4">0</td>
-                    </tr>
-                </tbody>
-            </table>
+            
+            <div class="bg-white overflow-auto relative">
+                <table class="w-full">
+                    <th class="flex justify-between items-center w-full  !text-bpay-gris1 text-center ">
+                        <tr class="w-full text-bpay-gris1 uppercase  font-bold text-xs text-start border-b-[1px] border-bpay-gris1">
+                            <th class="w-1/6 text-start pb-4 px-3">ID Transaction</th>
+                            <th class="w-1/6 pb-4 px-3">Valeur de part</th>
+                            <th class="w-1/6 pb-4 px-3">Nombre de parts</th>
+                            <th class="w-1/6 pb-4 px-3">Type</th>
+                            <th class="w-1/6 pb-4 px-3">Monttant <span class="text-[8px]">(fca)</span></th>
+                            <th class="w-1/6 pb-4 px-3">Date</th>
+                            <th class="w-1/6 pb-4 px-3">Statut Transaction</th>
+                            <th class="w-1/6 pb-4 px-3">Taxe</th>
+                        </tr>
+                    </th>
+                    <tbody class="text-start text-xs">
+                        <tr class="font-medium border-b-[1px] border-bpay-gris1 text-gray-700">
+                            <td class="text-start py-4 px-3">0025478</td>
+                            <td class="py-4 px-3">120</td>
+                            <td class="py-4 px-3">450</td>
+                            <td class="py-4 px-3">Investit</td>
+                            <td class="py-4 px-3">50 000</td>
+                            <td class="py-4 px-3">15-04-23 12:45:12</td>
+                            <td class="py-4 px-3"><span class="p-1 rounded-lg bg-red-200 text-gray-700">Echoué</span></td>
+                            <td class="py-4 px-3">0</td>
+                        </tr>
+                        <tr class="font-medium border-b-[1px] border-bpay-gris1 text-gray-700">
+                            <td class="text-start py-4 px-3">0025478</td>
+                            <td class="py-4 px-3">120</td>
+                            <td class="py-4 px-3">450</td>
+                            <td class="py-4 px-3">Investit</td>
+                            <td class="py-4 px-3">50 000</td>
+                            <td class="py-4 px-3">15-04-23 12:45:12</td>
+                            <td class="py-4 px-3"><span class="p-1 rounded-lg bg-green-200 text-gray-700">Terminé</span></td>
+                            <td class="py-4 px-3">0</td>
+                        </tr>
+                        <tr class="font-medium border-b-[1px] border-bpay-gris1 text-gray-700">
+                            <td class="text-start py-4 px-3">0025478</td>
+                            <td class="py-4 px-3">120</td>
+                            <td class="py-4 px-3">450</td>
+                            <td class="py-4 px-3">Investit</td>
+                            <td class="py-4 px-3">50 000</td>
+                            <td class="py-4 px-3">15-04-23 </td>
+                            <td class="py-4 px-3"><span class="p-1 rounded-lg bg-yellow-200 text-gray-700">En cours</span></td>
+                            <td class="py-4 px-3">0</td>
+                        </tr>
+                        <tr class="font-medium border-b-[1px] border-bpay-gris1 text-gray-700">
+                            <td class="text-start py-4 px-3">0025478</td>
+                            <td class="py-4 px-3">120</td>
+                            <td class="py-4 px-3">450</td>
+                            <td class="py-4 px-3">Investit</td>
+                            <td class="py-4 px-3">50 000</td>
+                            <td class="py-4 px-3">15-04-23 12:45:12</td>
+                            <td class="py-4 px-3"><span class="p-1 rounded-lg bg-red-200 text-gray-700">Echoué</span></td>
+                            <td class="py-4 px-3">0</td>
+                        </tr>
+                        <tr class="font-medium border-b-[1px] border-bpay-gris1 text-gray-700">
+                            <td class="text-start py-4 px-3">0025478</td>
+                            <td class="py-4 px-3">120</td>
+                            <td class="py-4 px-3">450</td>
+                            <td class="py-4 px-3">Investit</td>
+                            <td class="py-4 px-3">50 000</td>
+                            <td class="py-4 px-3">15-04-23 12:45:12</td>
+                            <td class="py-4 px-3"><span class="p-1 rounded-lg bg-green-200 text-gray-700">Terminé</span></td>
+                            <td class="py-4 px-3">0</td>
+                        </tr>
+                        <tr class="font-medium border-b-[1px] border-bpay-gris1 text-gray-700">
+                            <td class="text-start py-4 px-3">0025478</td>
+                            <td class="py-4 px-3">120</td>
+                            <td class="py-4 px-3">450</td>
+                            <td class="py-4 px-3">Investit</td>
+                            <td class="py-4 px-3">50 000</td>
+                            <td class="py-4 px-3">15-04-23 12:45:12</td>
+                            <td class="py-4 px-3"><span class="p-1 rounded-lg bg-yellow-200 text-gray-700">En cours</span></td>
+                            <td class="py-4 px-3">0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
     </div>
